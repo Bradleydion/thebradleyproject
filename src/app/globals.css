@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&family=Great+Vibes&display=swap');
+
+/* Tailwind v3 directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep globals minimal so layout comes from components */
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+::selection { background: #2E2A29; color: #F6F2F0; }
