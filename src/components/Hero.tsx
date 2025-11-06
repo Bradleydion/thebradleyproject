@@ -22,7 +22,7 @@ export default function Hero() {
           className="mt-6 max-w-2xl text-lg animate-fadeUp"
           style={{ animationDelay: "120ms" }}
         >
-          he Bradley Project is a queer-led creative hub that connects artists of every medium in a judgment-free, collaborative space — fostering authenticity, local community, and the resources to bring every vision to life.
+          The Bradley Project is a queer-led creative hub that connects artists of every medium in a judgment-free, collaborative space — fostering authenticity, local community, and the resources to bring every vision to life.
         </p>
 
         {/* CTAs */}
