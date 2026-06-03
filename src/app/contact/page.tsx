@@ -1,53 +1,88 @@
 import ContactForm from "@/components/ContactForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact — The Bradley Project",
+  description: "Get in touch with The Bradley Project — collaborations, Sequins, creative services, or general inquiries.",
+};
 
 export default function ContactPage() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16">
-      <h1 className="text-4xl font-display">Contact</h1>
-      <p className="mt-3 max-w-2xl">
-        I’d love to hear from you — collaborations, editorial work, poetry, app ideas, or general inquiries.
-      </p>
+      <div className="mb-12">
+        <p className="text-tbp-teal text-xs font-bold uppercase tracking-widest mb-3">Get In Touch</p>
+        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
+          Let&apos;s build something.
+        </h1>
+        <p className="text-tbp-muted text-lg max-w-xl">
+          Collaborations, Sequins partnerships, creative services, press inquiries — or just to say hello.
+        </p>
+      </div>
 
-      <div className="mt-10 grid gap-8 md:grid-cols-[1fr,1.2fr]">
+      <div className="grid gap-8 md:grid-cols-[1fr,1.6fr]">
         {/* Info column */}
-        <aside className="rounded-2xl border border-tbp-ink/10 bg-tbp-soft/40 p-6 h-max">
-          <h2 className="text-lg font-semibold font-display">Reach me</h2>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              Email: <a className="underline" href="mailto:hello@thebradleyproject.com">hello@thebradleyproject.com</a>
-            </li>
-            <li>Portland, OR (Pacific Time)</li>
-          </ul>
-
-          <h3 className="mt-6 text-lg font-semibold font-display">Links</h3>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li><a className="underline" href="https://github.com/Bradleydion" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a className="underline" href="https://www.youtube.com/@BKBookClub" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-            <li><a className="underline" href="https://www.instagram.com/thebradleyproject" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a className="underline" href="https://www.facebook.com/search/top?q=the%20bradley%20project%20" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          </ul>
-
-          <h3 className="mt-6 text-lg font-semibold font-display">Résumé</h3>
-          <div className="mt-3 flex gap-3">
+        <aside className="flex flex-col gap-6 h-max">
+          {/* Direct contact */}
+          <div className="rounded-2xl border border-tbp-border bg-tbp-surface p-6">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-tbp-muted mb-4">Direct</h2>
             <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-tbp-ink text-tbp-soft"
+              href="mailto:thebradleyprojectllc@gmail.com"
+              className="text-tbp-soft hover:text-tbp-teal transition text-sm break-all"
             >
-              Open PDF
+              thebradleyprojectllc@gmail.com
             </a>
-            <a
-              href="/resume"
-              className="px-4 py-2 rounded-full border border-tbp-ink hover:bg-tbp-ink/5"
-            >
-              Preview
-            </a>
+            <p className="text-tbp-muted text-xs mt-2">Portland, OR · Pacific Time</p>
+          </div>
+
+          {/* Social */}
+          <div className="rounded-2xl border border-tbp-border bg-tbp-surface p-6">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-tbp-muted mb-4">Follow Along</h2>
+            <ul className="flex flex-col gap-3">
+              {[
+                { label: "Instagram", href: "https://www.instagram.com/thebradleyproject" },
+                { label: "GitHub",    href: "https://github.com/Bradleydion" },
+                { label: "YouTube",   href: "https://www.youtube.com/@BKBookClub" },
+                { label: "Facebook",  href: "https://www.facebook.com/search/top?q=the%20bradley%20project%20" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-tbp-muted hover:text-tbp-soft transition text-sm flex items-center gap-2 group"
+                  >
+                    <span className="text-tbp-teal group-hover:translate-x-0.5 transition-transform">→</span>
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Résumé */}
+          <div className="rounded-2xl border border-tbp-border bg-tbp-surface p-6">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-tbp-muted mb-4">Résumé</h2>
+            <div className="flex gap-3">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full bg-tbp-teal text-tbp-bg text-sm font-semibold hover:opacity-90 transition"
+              >
+                Open PDF
+              </a>
+              <a
+                href="/resume"
+                className="px-4 py-2 rounded-full border border-tbp-border text-tbp-muted hover:text-tbp-soft hover:border-tbp-muted transition text-sm"
+              >
+                Preview
+              </a>
+            </div>
           </div>
         </aside>
 
         {/* Form column */}
-        <div className="rounded-2xl border border-tbp-ink/10 bg-white/70 p-6">
+        <div className="rounded-2xl border border-tbp-border bg-tbp-surface p-8">
           <ContactForm />
         </div>
       </div>

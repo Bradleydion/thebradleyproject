@@ -7,48 +7,45 @@ import { useRouter } from "next/navigation";
 
 export default function ResumePreview() {
   const [open, setOpen] = useState(false);
-  const router = useRouter(); // ✅ add this
+  const router = useRouter();
 
   return (
     <>
       <button
-        className="px-5 py-3 rounded-full bg-tbp-ink text-tbp-soft hover:opacity-90 transition"
+        className="px-5 py-3 rounded-full bg-tbp-teal text-tbp-bg font-semibold text-sm hover:opacity-90 transition"
         onClick={() => setOpen(true)}
       >
         Open Résumé Preview
       </button>
 
       <Modal open={open} onClose={() => setOpen(false)} widthClass="max-w-2xl">
-        {/* Header */}
-        <div className="p-6 border-b border-tbp-ink/10">
-          <h2 className="text-2xl font-display">Résumé — Snapshot</h2>
-          <p className="mt-2 text-sm opacity-80">{objective}</p>
+        <div className="p-6 border-b border-tbp-border">
+          <h2 className="text-xl font-bold text-tbp-soft">Résumé — Snapshot</h2>
+          <p className="mt-2 text-sm text-tbp-muted leading-relaxed">{objective}</p>
         </div>
 
-        {/* Experience list */}
         <div className="p-6">
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {experience.map((item, idx) => (
-              <li key={idx} className="rounded-xl bg-white/70 border border-tbp-ink/10 p-4">
-                <div className="flex items-center justify-between gap-4">
+              <li key={idx} className="rounded-xl border border-tbp-border bg-tbp-bg p-4">
+                <div className="flex items-start justify-between gap-4">
                   <div>
-                    <div className="text-base font-semibold">{item.employer}</div>
-                    <div className="text-sm opacity-80">{item.title}</div>
+                    <div className="text-sm font-semibold text-tbp-soft">{item.employer}</div>
+                    <div className="text-sm text-tbp-muted">{item.title}</div>
                   </div>
-                  <div className="text-sm opacity-70 text-right whitespace-nowrap">{item.dates}</div>
+                  <div className="text-xs text-tbp-muted text-right whitespace-nowrap shrink-0">{item.dates}</div>
                 </div>
-                {item.location && <div className="mt-1 text-xs opacity-70">{item.location}</div>}
+                {item.location && <div className="mt-1 text-xs text-tbp-muted">{item.location}</div>}
               </li>
             ))}
           </ul>
 
-          {/* Actions */}
           <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full border border-tbp-ink hover:bg-tbp-ink/5 transition"
+              className="px-4 py-2 rounded-full bg-tbp-teal text-tbp-bg text-sm font-semibold hover:opacity-90 transition"
             >
               Open Full PDF
             </a>
@@ -57,7 +54,7 @@ export default function ResumePreview() {
                 setOpen(false);
                 setTimeout(() => router.push("/contact"), 150);
               }}
-              className="px-4 py-2 rounded-full bg-tbp-ink text-tbp-soft"
+              className="px-4 py-2 rounded-full border border-tbp-border text-tbp-muted hover:text-tbp-soft transition text-sm"
             >
               Contact Me
             </button>
