@@ -354,38 +354,6 @@ export const photoShoots: Shoot[] = [
         "alt": "Nov 24"
       },
       {
-        "src": "/images/photography/nov-24/img_2020.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2021.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2022.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2023.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2024.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2025.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2026.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2028.jpg",
-        "alt": "Nov 24"
-      },
-      {
         "src": "/images/photography/nov-24/img_2029.jpg",
         "alt": "Nov 24"
       },
