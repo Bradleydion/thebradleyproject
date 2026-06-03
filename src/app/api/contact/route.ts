@@ -1,8 +1,6 @@
 // src/app/api/contact/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = "thebradleyprojectllc@gmail.com";
 
 export async function POST(req: NextRequest) {
@@ -10,7 +8,6 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { name, email, reason, message, social } = body;
 
-    // Basic server-side validation
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
     }
@@ -20,10 +17,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
 
-    // Honeypot check
     if (body.website) {
-      return NextResponse.json({ ok: true }); // silently discard bots
+      return NextResponse.json({ ok: true });
     }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not set");
+      return NextResponse.json({ error: "Email service not configured." }, { status: 500 });
+    }
+
+    // Dynamically import so the module doesn't crash at build time
+    const { Resend } = await import("resend");
+    const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
       from: "The Bradley Project <onboarding@resend.dev>",
