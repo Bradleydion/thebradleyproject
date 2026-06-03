@@ -22,42 +22,6 @@ export const photoShoots: Shoot[] = [
         "alt": "August 2025 Edits"
       },
       {
-        "src": "/images/photography/august-2025-edits/img_2035.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2036.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2037.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2038.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2039.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2040.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2041.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2042.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2043.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
         "src": "/images/photography/august-2025-edits/img_2044.jpg",
         "alt": "August 2025 Edits"
       },
@@ -79,10 +43,6 @@ export const photoShoots: Shoot[] = [
       },
       {
         "src": "/images/photography/august-2025-edits/img_2051.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2052.jpg",
         "alt": "August 2025 Edits"
       },
       {
@@ -118,67 +78,11 @@ export const photoShoots: Shoot[] = [
         "alt": "August 2025 Edits"
       },
       {
-        "src": "/images/photography/august-2025-edits/img_2061.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2062.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2063.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2064.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2065.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2066.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2067.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2068.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
         "src": "/images/photography/august-2025-edits/img_2069.jpg",
         "alt": "August 2025 Edits"
       },
       {
         "src": "/images/photography/august-2025-edits/img_2070.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2071.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2072.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2073.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2074.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2075.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
-        "src": "/images/photography/august-2025-edits/img_2076.jpg",
         "alt": "August 2025 Edits"
       },
       {
@@ -242,10 +146,6 @@ export const photoShoots: Shoot[] = [
         "alt": "August 2025 Edits"
       },
       {
-        "src": "/images/photography/august-2025-edits/img_2092.jpg",
-        "alt": "August 2025 Edits"
-      },
-      {
         "src": "/images/photography/august-2025-edits/img_2093.jpg",
         "alt": "August 2025 Edits"
       },
@@ -284,10 +184,6 @@ export const photoShoots: Shoot[] = [
     "slug": "cullen",
     "photos": [
       {
-        "src": "/images/photography/cullen/img_1880.jpg",
-        "alt": "Cullen"
-      },
-      {
         "src": "/images/photography/cullen/img_1972-2.jpg",
         "alt": "Cullen"
       },
@@ -316,136 +212,6 @@ export const photoShoots: Shoot[] = [
       {
         "src": "/images/photography/kelsey/img_1837.jpg",
         "alt": "Kelsey"
-      },
-      {
-        "src": "/images/photography/kelsey/img_1861.jpg",
-        "alt": "Kelsey"
-      }
-    ]
-  },
-  {
-    "shoot": "Monicas Wedding",
-    "slug": "monicas-wedding",
-    "photos": [
-      {
-        "src": "/images/photography/monicas-wedding/img_2176.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2178.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2179.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2180.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2182.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2183.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2184.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2185.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2186.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2187.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2188.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2189.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2190.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2191.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2192.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2193.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2194.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2195.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2196.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2199.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2203.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2205.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2206.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2208.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2209.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2210.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2212.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2213.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2214.jpg",
-        "alt": "Monicas Wedding"
-      },
-      {
-        "src": "/images/photography/monicas-wedding/img_2217.jpg",
-        "alt": "Monicas Wedding"
       }
     ]
   },
@@ -505,10 +271,6 @@ export const photoShoots: Shoot[] = [
       },
       {
         "src": "/images/photography/nov-24/img_1977.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_1995.jpg",
         "alt": "Nov 24"
       },
       {
@@ -592,14 +354,6 @@ export const photoShoots: Shoot[] = [
         "alt": "Nov 24"
       },
       {
-        "src": "/images/photography/nov-24/img_2018.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2019.jpg",
-        "alt": "Nov 24"
-      },
-      {
         "src": "/images/photography/nov-24/img_2020.jpg",
         "alt": "Nov 24"
       },
@@ -625,10 +379,6 @@ export const photoShoots: Shoot[] = [
       },
       {
         "src": "/images/photography/nov-24/img_2026.jpg",
-        "alt": "Nov 24"
-      },
-      {
-        "src": "/images/photography/nov-24/img_2027.jpg",
         "alt": "Nov 24"
       },
       {
