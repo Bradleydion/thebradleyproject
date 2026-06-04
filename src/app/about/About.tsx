@@ -138,6 +138,47 @@ export default function About() {
         </div>
       </div>
 
+      {/* Team */}
+      <div className="mb-16">
+        <div className="flex items-center gap-4 mb-8">
+          <div>
+            <p className="text-tbp-teal text-xs font-bold uppercase tracking-widest mb-1">The Team</p>
+            <h2 className="text-2xl font-bold">Who&apos;s building this.</h2>
+          </div>
+          <div className="flex-1 h-px bg-tbp-border" />
+        </div>
+
+        {/* Founder card */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-6">
+          <div className="rounded-2xl border border-tbp-border bg-tbp-surface p-6 flex flex-col gap-3">
+            <div className="w-12 h-12 rounded-full bg-tbp-teal/20 flex items-center justify-center text-tbp-teal font-bold text-lg">B</div>
+            <div>
+              <p className="font-bold text-tbp-soft">Bradley Dion</p>
+              <p className="text-tbp-teal text-xs font-semibold uppercase tracking-widest mt-0.5">Founder & Builder</p>
+            </div>
+            <p className="text-tbp-muted text-sm leading-relaxed">Writer, developer, and the person who started all of this. Responsible for product, publishing, creative direction, and vision.</p>
+            <p className="text-tbp-muted text-xs">Portland, OR</p>
+          </div>
+
+          {/* Open role placeholder — update as team grows */}
+          <div className="rounded-2xl border border-dashed border-tbp-border bg-tbp-bg p-6 flex flex-col gap-3 opacity-60">
+            <div className="w-12 h-12 rounded-full bg-tbp-border flex items-center justify-center text-tbp-muted text-lg">+</div>
+            <div>
+              <p className="font-bold text-tbp-muted">Director of Operations</p>
+              <p className="text-tbp-violet text-xs font-semibold uppercase tracking-widest mt-0.5">Coming Soon</p>
+            </div>
+            <p className="text-tbp-muted text-sm leading-relaxed">The person who keeps the machine running so Bradley can keep building. Role opens post-Sequins launch.</p>
+          </div>
+        </div>
+
+        <p className="text-tbp-muted text-sm italic">
+          The Bradley Project is a solo operation in Phase 1. As revenue grows, so does the team. Want to be part of what&apos;s being built?{" "}
+          <a href="/contact" className="text-tbp-teal hover:opacity-80 transition">Get in touch.</a>
+        </p>
+      </div>
+
+      <div className="h-px bg-tbp-border mb-16" />
+
       {/* CTA */}
       <div className="rounded-2xl border border-tbp-border bg-tbp-surface p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         <div>
