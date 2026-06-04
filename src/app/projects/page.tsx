@@ -129,7 +129,7 @@ export default function Projects() {
       {/* ── Photography ──────────────────────────────────────────────────── */}
       <SectionHeader label="Visual" title="Photography" />
       <a
-        href="/#photography"
+        href="/photography"
         className="group relative block w-full rounded-2xl overflow-hidden border border-tbp-border hover:border-tbp-violet/40 transition-all duration-300 mb-14"
         style={{ background: "linear-gradient(135deg, #0A0A0F 0%, #0D0A1A 100%)" }}
       >

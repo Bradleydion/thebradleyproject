@@ -2,9 +2,10 @@
 import { useState } from "react";
 
 const links = [
-  { label: "Work",    href: "/projects" },
-  { label: "Sequins", href: "/sequins" },
-  { label: "About",   href: "/about" },
+  { label: "Work",         href: "/projects" },
+  { label: "Sequins",      href: "/sequins" },
+  { label: "Photography",  href: "/photography" },
+  { label: "About",        href: "/about" },
 ];
 
 export function Header() {
