@@ -27,7 +27,7 @@ export function Footer() {
           <a href="https://www.instagram.com/thebradleyproject" target="_blank" rel="noopener noreferrer" className="text-tbp-muted hover:text-tbp-soft transition-colors">Instagram</a>
           <a href="https://github.com/Bradleydion" target="_blank" rel="noopener noreferrer" className="text-tbp-muted hover:text-tbp-soft transition-colors">GitHub</a>
           <a href="https://www.youtube.com/@BKBookClub" target="_blank" rel="noopener noreferrer" className="text-tbp-muted hover:text-tbp-soft transition-colors">YouTube</a>
-          <a href="mailto:thebradleyprojectllc@gmail.com" className="text-tbp-muted hover:text-tbp-soft transition-colors">Email</a>
+          <a href="mailto:bradleydion@thebradleyproject.com" className="text-tbp-muted hover:text-tbp-soft transition-colors">Email</a>
         </div>
       </div>
 

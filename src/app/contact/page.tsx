@@ -26,10 +26,10 @@ export default function ContactPage() {
           <div className="rounded-2xl border border-tbp-border bg-tbp-surface p-6">
             <h2 className="text-sm font-bold uppercase tracking-widest text-tbp-muted mb-4">Direct</h2>
             <a
-              href="mailto:thebradleyprojectllc@gmail.com"
+              href="mailto:bradleydion@thebradleyproject.com"
               className="text-tbp-soft hover:text-tbp-teal transition text-sm break-all"
             >
-              thebradleyprojectllc@gmail.com
+              bradleydion@thebradleyproject.com
             </a>
             <p className="text-tbp-muted text-xs mt-2">Portland, OR · Pacific Time</p>
           </div>

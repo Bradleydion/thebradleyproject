@@ -157,7 +157,7 @@ export default function ContactForm() {
       {/* Error */}
       {status === "error" && (
         <p className="text-tbp-rose text-sm">
-          Something went wrong. Try emailing directly: <a href="mailto:thebradleyprojectllc@gmail.com" className="underline">thebradleyprojectllc@gmail.com</a>
+          Something went wrong. Try emailing directly: <a href="mailto:bradleydion@thebradleyproject.com" className="underline">bradleydion@thebradleyproject.com</a>
         </p>
       )}
 

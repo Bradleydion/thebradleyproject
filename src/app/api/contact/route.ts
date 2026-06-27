@@ -1,7 +1,7 @@
 // src/app/api/contact/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
-const TO_EMAIL = "thebradleyprojectllc@gmail.com";
+const TO_EMAIL = "bradleydion@thebradleyproject.com";
 
 export async function POST(req: NextRequest) {
   try {
