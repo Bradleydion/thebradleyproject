@@ -49,8 +49,9 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error("Beta signup route error:", err);
-    return NextResponse.json({ error: "Server error." }, { status: 500 });
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("Beta signup route error:", msg);
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
 }
