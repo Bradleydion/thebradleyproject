@@ -16,17 +16,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
-      console.error("RESEND_API_KEY is not set");
+    const user = process.env.GMAIL_USER;
+    const pass = process.env.GMAIL_APP_PASSWORD;
+    if (!user || !pass) {
+      console.error("Gmail credentials not set");
       return NextResponse.json({ error: "Email service not configured." }, { status: 500 });
     }
 
-    const { Resend } = await import("resend");
-    const resend = new Resend(apiKey);
+    const nodemailer = await import("nodemailer");
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: { user, pass },
+    });
 
-    const { error } = await resend.emails.send({
-      from: "Sequins Beta <onboarding@resend.dev>",
+    await transporter.sendMail({
+      from: `"Sequins Beta" <${user}>`,
       to: TO_EMAIL,
       replyTo: email,
       subject: `[Sequins Beta] New signup — ${name} (${device})`,
@@ -43,11 +47,6 @@ export async function POST(req: NextRequest) {
         </div>
       `,
     });
-
-    if (error) {
-      console.error("Resend error:", error);
-      return NextResponse.json({ error: "Failed to send notification." }, { status: 500 });
-    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
