@@ -4,8 +4,12 @@ import { useState } from "react";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-const inputClass =
-  "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 outline-none focus:ring-2 focus:ring-[#00B3A4]/40 transition text-sm";
+const inputClass = (hasError: boolean) =>
+  `w-full rounded-xl border ${hasError ? "border-red-400" : "border-white/15"} bg-white/5 px-4 py-3 text-white placeholder:text-white/30 outline-none focus:ring-2 focus:ring-[#00B3A4]/40 transition text-sm`;
+
+function FieldError({ msg }: { msg: string }) {
+  return <p className="text-red-400 text-xs mt-1">{msg}</p>;
+}
 
 export default function BetaSignupForm() {
   const [name,     setName]     = useState("");
@@ -13,15 +17,20 @@ export default function BetaSignupForm() {
   const [location, setLocation] = useState("");
   const [device,   setDevice]   = useState<"iOS" | "Android" | "">("");
   const [status,   setStatus]   = useState<Status>("idle");
+  const [touched,  setTouched]  = useState(false);
 
-  const isValid =
-    name.trim().length > 1 &&
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) &&
-    location.trim().length > 1 &&
-    device !== "";
+  const errors = {
+    name:     name.trim().length < 2     ? "Please enter your full name."          : "",
+    email:    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "Please enter a valid email address." : "",
+    location: location.trim().length < 2 ? "Please enter your city or location."   : "",
+    device:   device === ""              ? "Please select your device type."        : "",
+  };
+
+  const isValid = Object.values(errors).every((e) => e === "");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setTouched(true);
     if (!isValid) return;
     setStatus("sending");
 
@@ -34,7 +43,7 @@ export default function BetaSignupForm() {
 
       if (res.ok) {
         setStatus("success");
-        setName(""); setEmail(""); setLocation(""); setDevice("");
+        setName(""); setEmail(""); setLocation(""); setDevice(""); setTouched(false);
       } else {
         setStatus("error");
       }
@@ -68,12 +77,12 @@ export default function BetaSignupForm() {
         <input
           id="beta-name"
           type="text"
-          className={inputClass}
+          className={inputClass(touched && !!errors.name)}
           placeholder="Jane Doe"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          required
         />
+        {touched && errors.name && <FieldError msg={errors.name} />}
       </div>
 
       {/* Email */}
@@ -84,12 +93,12 @@ export default function BetaSignupForm() {
         <input
           id="beta-email"
           type="email"
-          className={inputClass}
+          className={inputClass(touched && !!errors.email)}
           placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
+        {touched && errors.email && <FieldError msg={errors.email} />}
       </div>
 
       {/* Location */}
@@ -100,12 +109,12 @@ export default function BetaSignupForm() {
         <input
           id="beta-location"
           type="text"
-          className={inputClass}
+          className={inputClass(touched && !!errors.location)}
           placeholder="Portland, OR"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          required
         />
+        {touched && errors.location && <FieldError msg={errors.location} />}
       </div>
 
       {/* Device */}
@@ -122,6 +131,8 @@ export default function BetaSignupForm() {
               className={`py-3 rounded-xl border text-sm font-semibold transition ${
                 device === d
                   ? "border-[#00B3A4] bg-[#00B3A4]/15 text-[#00B3A4]"
+                  : touched && errors.device
+                  ? "border-red-400 bg-white/5 text-white/50"
                   : "border-white/15 bg-white/5 text-white/50 hover:border-white/30 hover:text-white/80"
               }`}
             >
@@ -129,9 +140,10 @@ export default function BetaSignupForm() {
             </button>
           ))}
         </div>
+        {touched && errors.device && <FieldError msg={errors.device} />}
       </div>
 
-      {/* Error */}
+      {/* API Error */}
       {status === "error" && (
         <p className="text-red-400 text-sm text-center">
           Something went wrong. Email us directly at{" "}
@@ -144,7 +156,7 @@ export default function BetaSignupForm() {
       {/* Submit */}
       <button
         type="submit"
-        disabled={!isValid || status === "sending"}
+        disabled={status === "sending"}
         className="mt-2 w-full py-3.5 rounded-full bg-[#00B3A4] text-black font-bold text-sm hover:opacity-90 transition disabled:opacity-40 disabled:cursor-not-allowed"
       >
         {status === "sending" ? "Signing up…" : "Sign Up for Beta →"}
