@@ -11,23 +11,50 @@ export const metadata: Metadata = {
     "Discover drag shows, buy tickets, get booked, and run the whole night. Sequins is the app built for the drag community.",
 };
 
-// ── Inline SVG phone mockup ────────────────────────────────────────────────
+// ── Real app screenshot showcase ───────────────────────────────────────────
+function Phone({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  return (
+    <div className={`relative rounded-[2rem] border-2 border-white/15 overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5)] flex-shrink-0 ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} className="w-full h-full object-cover object-top" />
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-10 h-[3px] rounded-full bg-white/40" />
+    </div>
+  );
+}
+
 function PhoneMockup() {
   return (
-    <div className="relative mx-auto w-[220px] h-[440px] rounded-[2.5rem] border-2 border-white/20 bg-gradient-to-b from-[#111827] to-[#0a0b0e] shadow-[0_0_80px_rgba(0,179,164,0.15)] flex flex-col items-center justify-center gap-4 px-5">
-      {/* Notch */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1.5 rounded-full bg-white/20" />
-      {/* Screen content */}
-      <div className="text-3xl">✦</div>
-      <p className="text-white font-semibold tracking-widest text-sm uppercase">Sequins</p>
-      <p className="text-white/40 text-xs text-center leading-relaxed">The home of drag performance</p>
-      <div className="flex gap-2 mt-2">
-        <div className="h-1.5 w-8 rounded-full bg-[#00B3A4]" />
-        <div className="h-1.5 w-4 rounded-full bg-white/20" />
-        <div className="h-1.5 w-4 rounded-full bg-white/20" />
-      </div>
-      {/* Home bar */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-20 h-1 rounded-full bg-white/20" />
+    <div className="flex items-end justify-center gap-3 mt-16 mb-4 px-4">
+      {/* Outer left — small, faded */}
+      <Phone
+        src="/images/sequins/screen-4.jpg"
+        alt="Sequins profile"
+        className="hidden sm:block w-[110px] h-[220px] opacity-40 translate-y-6"
+      />
+      {/* Inner left */}
+      <Phone
+        src="/images/sequins/screen-2.jpg"
+        alt="Sequins performer"
+        className="w-[140px] h-[280px] opacity-75 translate-y-3"
+      />
+      {/* Center hero — splash screen */}
+      <Phone
+        src="/images/sequins/screen-0.jpg"
+        alt="Sequins app"
+        className="w-[180px] h-[360px] z-10 shadow-[0_0_60px_rgba(0,179,164,0.25)]"
+      />
+      {/* Inner right */}
+      <Phone
+        src="/images/sequins/screen-1.jpg"
+        alt="Sequins discover"
+        className="w-[140px] h-[280px] opacity-75 translate-y-3"
+      />
+      {/* Outer right — small, faded */}
+      <Phone
+        src="/images/sequins/screen-3.jpg"
+        alt="Sequins event"
+        className="hidden sm:block w-[110px] h-[220px] opacity-40 translate-y-6"
+      />
     </div>
   );
 }
@@ -137,10 +164,8 @@ export default function SequinsPage() {
           </a>
         </div>
 
-        {/* Phone mockup */}
-        <div className="mt-16 mb-4">
-          <PhoneMockup />
-        </div>
+        {/* Phone screenshots */}
+        <PhoneMockup />
 
         {/* Scroll cue */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/30 text-xs">
