@@ -32,8 +32,14 @@ export function Footer() {
       </div>
 
       <div className="border-t border-tbp-border">
-        <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-tbp-muted">
-          <span>© {new Date().getFullYear()} The Bradley Project LLC · Portland, OR</span>
+        <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-tbp-muted">
+          <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+            <span>© {new Date().getFullYear()} The Bradley Project LLC · Portland, OR</span>
+            <span className="text-tbp-border">·</span>
+            <a href="/privacy" className="hover:text-tbp-soft transition-colors">Privacy Policy</a>
+            <span className="text-tbp-border">·</span>
+            <a href="/terms" className="hover:text-tbp-soft transition-colors">Terms of Service</a>
+          </div>
           <span className="gradient-text font-semibold">Phase 1: Sequins ✦</span>
         </div>
       </div>

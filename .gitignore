@@ -20,3 +20,4 @@ pnpm-debug.log*
 .vercel/
 .turbo/
 coverage/
+tsconfig.tsbuildinfo
