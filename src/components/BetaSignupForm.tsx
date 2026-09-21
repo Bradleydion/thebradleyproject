@@ -58,7 +58,7 @@ export default function BetaSignupForm() {
         <div className="text-4xl mb-4">✦</div>
         <h3 className="text-white font-bold text-xl mb-2">You&apos;re on the list!</h3>
         <p className="text-white/50 text-sm leading-relaxed">
-          We&apos;ll reach out as soon as Sequins is live in the app stores. Get ready — the show is almost on.
+          Check your inbox — we just sent you a welcome, plus a code to share with your friends. We&apos;ll reach out the moment Sequins is live.
         </p>
       </div>
     );
