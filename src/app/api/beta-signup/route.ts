@@ -57,6 +57,7 @@ export async function POST(req: NextRequest) {
 
     // 2) Welcome the tester. Replies (the "how'd you hear about us" answers) come to Bradley.
     //    A failure here is logged but doesn't fail the signup — Bradley already has their info.
+    let introSent = false;
     try {
       const welcome = betaWelcomeEmail(String(name));
       await transporter.sendMail({
@@ -67,14 +68,45 @@ export async function POST(req: NextRequest) {
         html: welcome.html,
         text: welcome.text,
       });
+      introSent = true;
     } catch (welcomeErr) {
       console.error("Beta welcome email failed:", welcomeErr instanceof Error ? welcomeErr.message : welcomeErr);
     }
+
+    // 3) Log the signup to the beta Google Sheet (Apps Script web app).
+    //    Optional — skipped if the env vars aren't set; never fails the signup.
+    await logToSheet({ name, email, device, location, introSent });
 
     return NextResponse.json({ ok: true });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("Beta signup route error:", msg);
     return NextResponse.json({ error: "Server error." }, { status: 500 });
+  }
+}
+
+async function logToSheet(row: {
+  name: string;
+  email: string;
+  device: string;
+  location: string;
+  introSent: boolean;
+}) {
+  const url = process.env.SHEETS_WEBHOOK_URL;
+  const secret = process.env.SHEETS_WEBHOOK_SECRET;
+  if (!url || !secret) return;
+  try {
+    // Apps Script answers POSTs with a 302; the row is written before the
+    // redirect, so we don't need to follow it.
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ secret, ...row }),
+      redirect: "manual",
+      signal: AbortSignal.timeout(8000),
+    });
+    if (res.status >= 400) console.error("Sheet log failed:", res.status);
+  } catch (err) {
+    console.error("Sheet log error:", err instanceof Error ? err.message : err);
   }
 }
