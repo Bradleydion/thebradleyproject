@@ -21,3 +21,4 @@ pnpm-debug.log*
 .turbo/
 coverage/
 tsconfig.tsbuildinfo
+._*
