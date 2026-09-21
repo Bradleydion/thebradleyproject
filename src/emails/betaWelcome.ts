@@ -175,7 +175,7 @@ Your invite isn&rsquo;t ready yet &mdash; but you are. Here&rsquo;s what we&rsqu
   <tr><td class="pad" style="padding:20px 40px 0 40px;">
     ${eyebrow("Being honest about the beta")}
     <p style="margin:0 0 14px 0;font-family:${FONT};font-size:15px;line-height:24px;color:${C.body};">
-      This is a first build. Payments run in test mode, so nothing you &ldquo;buy&rdquo; costs real money &mdash; poke at it, break it on purpose. Some events are sample data, and a few corners will look unfinished.
+      This is a first build. Payments are live &mdash; tickets and tips are real money, and they reach real performers. Everything else is yours to poke at and break on purpose. Some events are sample data, and a few corners will look unfinished.
     </p>
     <p style="margin:0;font-family:${FONT};font-size:15px;line-height:24px;color:${C.body};">
       That&rsquo;s why you&rsquo;re here. Messaging, a directory of safe venues, and more community tools are next &mdash; and a lot of what we build after launch will come straight from what testers tell us.
@@ -223,7 +223,7 @@ Talent — A real profile, gig invites with pay agreed upfront, commissions, and
 Host — Post the night with ticketing, staff it, QR check-in at the door, and pay your cast from one screen.
 
 BEING HONEST ABOUT THE BETA
-This is a first build. Payments run in test mode, so nothing you "buy" costs real money. Some events are sample data. Messaging, a safe-venue directory, and more community tools are next — shaped by what testers tell us.
+This is a first build. Payments are live — tickets and tips are real money, and they reach real performers. Everything else is yours to poke at and break. Some events are sample data. Messaging, a safe-venue directory, and more community tools are next — shaped by what testers tell us.
 
 See you soon,
 Bradley
